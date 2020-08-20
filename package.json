@@ -1,0 +1,21 @@
+{
+  "name": "Posters",
+  "version": "1.0.0",
+  "description": "Tracing images to vector via. potrace",
+  "main": "potrace.js",
+  "scripts": {
+    "start": "node potrace.js"
+  },
+  "author": "Tobias Mønster Madsen",
+  "license": "ISC",
+  "devDependencies": {
+    "potrace": "^2.1.8"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "deepmerge": "^4.2.2",
+    "moment": "^2.27.0",
+    "open": "^7.1.0",
+    "os": "^0.1.1"
+  }
+}
