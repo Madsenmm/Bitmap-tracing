@@ -42,6 +42,7 @@ class Trace {
 			'FILE_MISSING': chalk.bold.magenta(`File ${chalk.bold(this.input)} doesn\'t exist`),
 			'FILE_EXISTS': chalk.grey(`File already exists, adding Date ${chalk.bold(`"${this.settings.dateFormat}"`)} to filename`),
 			'CREATING_FILE': chalk.magenta(`Creating file ${chalk.bold(`${this.output}.svg`)}`),
+			'TRACING_STARTED': chalk.green('Tracing started, wait...'),
 			'SUCCESS': chalk.green.bold(`Finished tracing image:`),
 			'OPEN_BROWSER': chalk.blue.bold('Opening in browser!')
 		}
@@ -97,6 +98,8 @@ class Trace {
 	trace() {
 		const self = this;
 		const type = this.settings.detailed ? 'posterize' : 'trace';
+
+		console.log(this.messages.TRACING_STARTED);
 
 		potrace[type](this.input, this.settings.tracer, function(err, svg) {
 			self.tracerResult(err, svg);

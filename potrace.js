@@ -12,7 +12,8 @@ const Tracer = new Trace(input, output, {
 	openBrowser: true,
 	outputPath: outputPath,
 	tracer: {
-		threshold: 160,
+		turdsize: 4,
+		threshold: 120,
 		// background: '#141414',
 		// color: '#f28900'
 	}
