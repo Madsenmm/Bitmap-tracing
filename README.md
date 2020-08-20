@@ -1,7 +1,7 @@
 ## Bitmap tracer
 
-**Credit to this cool NPM package**
-[Potrace (JS)](https://www.npmjs.com/package/potrace)
+**Credit to this cool repo**
+[Potrace (JS)](https://github.com/tooolbox/node-potrace)
 
 ### Manually converting
 [Raster image to vector](https://github.com/chiranjeevbitm/Raster-image-to-vector-image)

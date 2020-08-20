@@ -14,6 +14,6 @@ const Tracer = new Trace(input, output, {
 	tracer: {
 		threshold: 160,
 		// background: '#141414',
-		// color: '#cc8746'
+		// color: '#f28900'
 	}
 })

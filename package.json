@@ -6,16 +6,15 @@
   "scripts": {
     "start": "node potrace.js"
   },
-  "author": "Tobias Mønster Madsen",
+  "author": "Tobias M. Madsen",
   "license": "ISC",
-  "devDependencies": {
-    "potrace": "^2.1.8"
-  },
+  "devDependencies": {},
   "dependencies": {
     "chalk": "^4.1.0",
     "deepmerge": "^4.2.2",
     "moment": "^2.27.0",
     "open": "^7.1.0",
-    "os": "^0.1.1"
+    "os": "^0.1.1",
+    "potrace": "^2.1.8"
   }
 }

@@ -82,7 +82,7 @@ class Trace {
 
 		// Check if input file exists
 		if ( fs.existsSync(this.input) ) {
-			this.settings.detailed ? this.traceDetailed() : this.traceSimple();
+			this.trace();
 		} else {
 			console.log(this.messages.FILE_MISSING)
 		}
@@ -91,36 +91,24 @@ class Trace {
 
 
 	/**
-	 * Traces bitmap image with potrace
+	 * Handle tracing
 	 */
 
-	traceSimple() {
+	trace() {
 		const self = this;
+		const type = this.settings.detailed ? 'posterize' : 'trace';
 
-		potrace.trace(this.input, this.settings.tracer, function(err, svg) {
-			self.tracerResult(err, svg)
-		});
-	}
-
-
-
-	/**
-	 * Utilizes posterize
-	 * Runs x amount of times, based on "steps" set from settings
-	 */
-
-	traceDetailed() {
-		const self = this;
-
-		potrace.posterize(this.input, this.settings.tracer, function(err, svg) {
-			self.tracerResult(err, svg)
-		});
+		potrace[type](this.input, this.settings.tracer, function(err, svg) {
+			self.tracerResult(err, svg);
+		})
 	}
 
 
 
 	/**
 	 * Handle trace results
+	 * @param err	Errors
+	 * @param svg	Traced SVG
 	 */
 
 	tracerResult(err, svg) {
