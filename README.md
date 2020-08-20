@@ -13,4 +13,5 @@
 ```magick convert <filename.jpg> <output.ppm>```
 
 **Potrace**
+
 ```potrace -s output.ppm -o svgout.svg```
