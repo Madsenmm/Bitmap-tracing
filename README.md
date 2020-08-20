@@ -12,6 +12,5 @@
 **Convert image to bitmap (potrace only supports that)**
 ```magick convert <filename.jpg> <output.ppm>```
 
-**Potrace**
-
+Potrace
 ```potrace -s output.ppm -o svgout.svg```
