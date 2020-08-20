@@ -42,6 +42,7 @@ class Trace {
 			'FILE_MISSING': chalk.bold.magenta(`File ${chalk.bold(this.input)} doesn\'t exist`),
 			'FILE_EXISTS': chalk.grey(`File already exists, adding Date ${chalk.bold(`"${this.settings.dateFormat}"`)} to filename`),
 			'CREATING_FILE': chalk.magenta(`Creating file ${chalk.bold(`${this.output}.svg`)}`),
+			'CREATING_FOLDER': chalk.magenta(`Creating folder ${this.settings.outputPath}`),
 			'TRACING_STARTED': chalk.green('Tracing started, wait...'),
 			'SUCCESS': chalk.green.bold(`Finished tracing image:`),
 			'OPEN_BROWSER': chalk.blue.bold('Opening in browser!')
@@ -78,6 +79,7 @@ class Trace {
 
 		// Create folder if it doesn't exist
 		if ( !fs.existsSync(this.settings.outputPath) ) {
+			console.log(this.messages.CREATING_FOLDER);
 			fs.mkdirSync(this.settings.outputPath);
 		}
 

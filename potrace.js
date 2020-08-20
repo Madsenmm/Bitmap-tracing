@@ -13,7 +13,7 @@ const Tracer = new Trace(input, output, {
 	outputPath: outputPath,
 	tracer: {
 		turdsize: 4,
-		threshold: 120,
+		threshold: 160,
 		// background: '#141414',
 		// color: '#f28900'
 	}
