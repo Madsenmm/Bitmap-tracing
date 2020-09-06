@@ -142,7 +142,9 @@ class Trace {
 		console.log(this.messages.OPEN_BROWSER)
 
 		setTimeout(function() { 
-			open(filePath);
+			open(filePath, {
+				app: 'brave'
+			});
 		}, 2000);
 	}
 
